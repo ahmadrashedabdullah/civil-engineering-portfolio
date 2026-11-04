@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="SAP2000 Seismic and Structural Analysis Project by Rashed Abdullah.">
+
+    <title>
+        SAP2000 Seismic Analysis | Rashed Abdullah
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav>
+
+    <a href="/"
+       class="nav-name">
+
+        Rashed Abdullah
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/#about">
+            About
+        </a>
+
+        <a href="/#skills">
+            Skills
+        </a>
+
+        <a href="/#projects">
+            Projects
+        </a>
+
+        <a href="/#contact">
+            Contact
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     PROJECT
+========================================================= -->
+
+<main class="project-detail">
+
+
+    <!-- PROJECT HEADER -->
+
+    <header class="project-header">
+
+
+        <p class="project-label">
+            STRUCTURAL & EARTHQUAKE ENGINEERING
+        </p>
+
+
+        <h1>
+            SAP2000 Seismic & Structural Analysis
+        </h1>
+
+
+        <p class="project-subtitle">
+
+            Static & Dynamic Analysis of a Multi-Story Steel Building
+
+        </p>
+
+
+        <p class="project-intro">
+
+            This project evaluated the seismic behavior of a multi-story
+            steel building using SAP2000 and supporting hand calculations.
+            The analysis included structural modeling, seismic design
+            parameters, building periods, base shear, story-force
+            distribution, structural displacement, and static and dynamic
+            seismic response.
+
+        </p>
+
+
+        <div class="project-tags"
+             style="justify-content:center; margin-top:30px;">
+
+            <span>SAP2000</span>
+
+            <span>Structural Analysis</span>
+
+            <span>Seismic Analysis</span>
+
+            <span>Structural Dynamics</span>
+
+            <span>Response Spectrum</span>
+
+            <span>IBC</span>
+
+        </div>
+
+
+    </header>
+
+
+
+    <div class="project-detail-content">
+
+
+        <!-- =================================================
+             01 PROJECT OVERVIEW
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                01 — PROJECT OVERVIEW
+            </p>
+
+
+            <h2>
+                Project Objective
+            </h2>
+
+
+            <p>
+
+                The objective of the project was to analyze the structural
+                and seismic response of a multi-story steel building and
+                compare the behavior of an original structural model with
+                a revised model.
+
+            </p>
+
+
+            <p>
+
+                SAP2000 was used to model the structural system and perform
+                static, modal, and dynamic analyses. Supporting hand
+                calculations were completed to verify key seismic design
+                parameters and structural response quantities.
+
+            </p>
+
+
+            <div class="project-highlight">
+
+                The project combined computer-based structural modeling
+                with hand calculations to evaluate and verify seismic
+                behavior.
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             02 STRUCTURAL SYSTEM
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                02 — STRUCTURAL MODEL
+            </p>
+
+
+            <h2>
+                Multi-Story Steel Building
+            </h2>
+
+
+            <p>
+
+                The structure was modeled as a multi-story steel building
+                with different lateral-force-resisting systems in the
+                two principal directions.
+
+            </p>
+
+
+            <div class="decision-grid">
+
+
+                <div class="decision-card">
+
+                    <h3>
+                        X Direction
+                    </h3>
+
+                    <p>
+                        Steel moment-frame behavior was evaluated in the
+                        X direction.
+                    </p>
+
+                </div>
+
+
+                <div class="decision-card">
+
+                    <h3>
+                        Y Direction
+                    </h3>
+
+                    <p>
+                        Steel braced-frame behavior was evaluated in the
+                        Y direction.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             03 PERIOD
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                03 — STRUCTURAL DYNAMICS
+            </p>
+
+
+            <h2>
+                Building Period of Vibration
+            </h2>
+
+
+            <p>
+
+                Approximate fundamental periods were calculated using
+                the building height and structural-system parameters.
+                These values were then compared with the periods obtained
+                from the structural model.
+
+            </p>
+
+
+            <p>
+
+                The comparison helped evaluate how changes to the
+                structural configuration affected the dynamic behavior
+                of the building.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             04 SEISMIC PARAMETERS
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                04 — SEISMIC DESIGN PARAMETERS
+            </p>
+
+
+            <h2>
+                Seismic Coefficients
+            </h2>
+
+
+            <p>
+
+                Supporting calculations were completed to establish
+                seismic design parameters used in the structural analysis,
+                including site coefficients and design spectral response
+                parameters.
+
+            </p>
+
+
+            <div class="input-grid">
+
+
+                <div class="input-card">
+
+                    <h3>
+                        S<sub>S</sub>
+                    </h3>
+
+                    <p>
+                        Short-period mapped spectral acceleration.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        S<sub>1</sub>
+                    </h3>
+
+                    <p>
+                        One-second mapped spectral acceleration.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        F<sub>a</sub> & F<sub>v</sub>
+                    </h3>
+
+                    <p>
+                        Site coefficients used to develop the design
+                        spectral response parameters.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        S<sub>DS</sub>
+                    </h3>
+
+                    <p>
+                        Design spectral response acceleration at
+                        short periods.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        S<sub>D1</sub>
+                    </h3>
+
+                    <p>
+                        Design spectral response acceleration at a
+                        one-second period.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        Seismic Design Category
+                    </h3>
+
+                    <p>
+                        The supporting calculations classified the
+                        structure within Seismic Design Category D.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             05 BASE SHEAR
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                05 — BASE SHEAR
+            </p>
+
+
+            <h2>
+                Seismic Base Shear
+            </h2>
+
+
+            <p>
+
+                The seismic response coefficient was calculated for each
+                direction and checked against applicable upper and lower
+                limits.
+
+            </p>
+
+
+            <p>
+
+                Total seismic base shear was then calculated using:
+
+            </p>
+
+
+            <div class="project-highlight">
+
+                V = C<sub>s</sub>W
+
+            </div>
+
+
+            <p style="margin-top:25px;">
+
+                The resulting base shear was used as the total lateral
+                seismic force acting on the structure.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             06 STORY FORCES
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                06 — STORY FORCE DISTRIBUTION
+            </p>
+
+
+            <h2>
+                Vertical Distribution of Seismic Forces
+            </h2>
+
+
+            <p>
+
+                After determining the total base shear, the seismic
+                force was distributed vertically through the structure
+                according to the seismic weight and elevation of each
+                floor.
+
+            </p>
+
+
+            <p>
+
+                Story forces were calculated separately for the
+                X and Y directions and compared between the original
+                and revised structural models.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             07 STATIC AND DYNAMIC
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                07 — STRUCTURAL ANALYSIS
+            </p>
+
+
+            <h2>
+                Static & Dynamic Analysis
+            </h2>
+
+
+            <p>
+
+                SAP2000 was used to evaluate the structural response
+                under multiple analysis conditions.
+
+            </p>
+
+
+            <div class="output-grid">
+
+
+                <div class="output-card">
+
+                    <h3>
+                        Dead Load
+                    </h3>
+
+                    <p>
+                        Structural response under gravity loading.
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>
+                        Modal Analysis
+                    </h3>
+
+                    <p>
+                        Dynamic characteristics and vibration modes
+                        of the structure.
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>
+                        IBC Static
+                    </h3>
+
+                    <p>
+                        Equivalent lateral-force seismic analysis.
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>
+                        IBC Dynamic
+                    </h3>
+
+                    <p>
+                        Dynamic seismic response of the structural model.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             08 RESPONSE SPECTRUM
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                08 — RESPONSE SPECTRUM
+            </p>
+
+
+            <h2>
+                Response Spectrum Analysis
+            </h2>
+
+
+            <p>
+
+                A response-spectrum function was defined in SAP2000
+                to evaluate the building response over a range of
+                structural periods.
+
+            </p>
+
+
+            <p>
+
+                The analysis used a 5% damping ratio and provided a
+                dynamic representation of the expected structural
+                response under earthquake loading.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             09 DISPLACEMENT
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                09 — STRUCTURAL RESPONSE
+            </p>
+
+
+            <h2>
+                Displacement & Deformed Shape
+            </h2>
+
+
+            <p>
+
+                Structural displacement and deformed shapes were reviewed
+                in SAP2000 to understand how the building responded to
+                lateral loading.
+
+            </p>
+
+
+            <p>
+
+                Results from the original and revised models were compared
+                to identify differences in structural response.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             10 MODEL COMPARISON
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                10 — MODEL COMPARISON
+            </p>
+
+
+            <h2>
+                Original vs. Revised Model
+            </h2>
+
+
+            <p>
+
+                One of the main objectives was to compare the original
+                structural configuration with a revised model.
+
+            </p>
+
+
+            <p>
+
+                Changes to the building configuration affected the
+                dynamic properties, seismic-force distribution, and
+                calculated structural response.
+
+            </p>
+
+
+            <div class="decision-grid">
+
+
+                <div class="decision-card">
+
+                    <h3>
+                        Original Model
+                    </h3>
+
+                    <p>
+                        Baseline structural configuration used for the
+                        initial seismic analysis.
+                    </p>
+
+                </div>
+
+
+                <div class="decision-card">
+
+                    <h3>
+                        Revised Model
+                    </h3>
+
+                    <p>
+                        Modified structural configuration used to evaluate
+                        the effects of changes to the building system.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             11 SKILLS
+        ================================================== -->
+
+        <section class="project-section">
+
+
+            <p class="section-label">
+                11 — SKILLS DEMONSTRATED
+            </p>
+
+
+            <h2>
+                Engineering Skills Applied
+            </h2>
+
+
+            <div class="skills-list">
+
+                <span>SAP2000</span>
+
+                <span>Structural Analysis</span>
+
+                <span>Seismic Analysis</span>
+
+                <span>Structural Dynamics</span>
+
+                <span>Response Spectrum Analysis</span>
+
+                <span>IBC Seismic Design</span>
+
+                <span>Base Shear</span>
+
+                <span>Story Forces</span>
+
+                <span>Hand Calculations</span>
+
+                <span>Technical Documentation</span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             BACK BUTTON
+        ================================================== -->
+
+        <div class="back-button-container">
+
+            <a href="/#projects"
+               class="button primary-button">
+
+                ← Back to Engineering Projects
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</main>
+
+
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <strong>
+                Rashed Abdullah
+            </strong>
+
+            <span>
+                Civil Engineering Portfolio
+            </span>
+
+        </div>
+
+
+        <p>
+            © 2026 Rashed Abdullah
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Rashed Abdullah - Civil Engineering Portfolio specializing in Construction Management, Structural Engineering, GIS, and Project Engineering.">
+
+    <title>
+        Rashed Abdullah | Civil Engineer
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home"
+           class="nav-name">
+            Rashed Abdullah
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#education">
+                Education
+            </a>
+
+            <a href="#experience">
+                Experience
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a href="{{ url_for(
+                    'static',
+                    filename='resume/Rashed_Abdullah_Resume.pdf'
+                ) }}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="nav-resume">
+
+                Resume
+
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HOME / HERO
+========================================================= -->
+
+<header class="hero"
+        id="home">
+
+
+    <!-- BLUEPRINT GRID -->
+
+    <div class="blueprint-grid"
+         aria-hidden="true">
+    </div>
+
+
+    <!-- ENGINEERING BACKGROUND DRAWING -->
+
+    <div class="engineering-background"
+         aria-hidden="true">
+
+
+        <svg class="engineering-svg"
+             viewBox="0 0 1400 650"
+             preserveAspectRatio="xMidYMid slice">
+
+
+            <g class="structure-lines">
+
+
+                <!-- BRIDGE DECK -->
+
+                <line x1="40"
+                      y1="430"
+                      x2="1360"
+                      y2="430"/>
+
+                <line x1="40"
+                      y1="445"
+                      x2="1360"
+                      y2="445"/>
+
+
+                <!-- LEFT TOWER -->
+
+                <line x1="350"
+                      y1="430"
+                      x2="350"
+                      y2="190"/>
+
+                <line x1="365"
+                      y1="430"
+                      x2="365"
+                      y2="190"/>
+
+
+                <!-- RIGHT TOWER -->
+
+                <line x1="1035"
+                      y1="430"
+                      x2="1035"
+                      y2="190"/>
+
+                <line x1="1050"
+                      y1="430"
+                      x2="1050"
+                      y2="190"/>
+
+
+                <!-- STRUCTURAL CURVE -->
+
+                <path d="
+                    M40 430
+                    Q350 125 700 430
+                    Q1050 125 1360 430
+                "/>
+
+
+                <!-- VERTICAL MEMBERS -->
+
+                <line x1="150"
+                      y1="330"
+                      x2="150"
+                      y2="430"/>
+
+                <line x1="250"
+                      y1="245"
+                      x2="250"
+                      y2="430"/>
+
+                <line x1="470"
+                      y1="250"
+                      x2="470"
+                      y2="430"/>
+
+                <line x1="570"
+                      y1="325"
+                      x2="570"
+                      y2="430"/>
+
+                <line x1="830"
+                      y1="325"
+                      x2="830"
+                      y2="430"/>
+
+                <line x1="930"
+                      y1="250"
+                      x2="930"
+                      y2="430"/>
+
+                <line x1="1150"
+                      y1="245"
+                      x2="1150"
+                      y2="430"/>
+
+                <line x1="1250"
+                      y1="330"
+                      x2="1250"
+                      y2="430"/>
+
+
+            </g>
+
+        </svg>
+
+    </div>
+
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="hero-content">
+
+
+        <p class="hero-eyebrow">
+            CIVIL ENGINEERING PORTFOLIO
+        </p>
+
+
+        <h1>
+            Rashed Abdullah
+        </h1>
+
+
+        <h2>
+
+            Civil Engineer
+
+            <span>|</span>
+
+            Construction Management & Structural Engineering
+
+        </h2>
+
+
+        <p class="hero-description">
+
+            Graduate civil engineering student combining construction
+            management, structural engineering, GIS, project experience,
+            and data-driven engineering analysis to solve real-world
+            construction and infrastructure challenges.
+
+        </p>
+
+
+
+        <!-- HERO BUTTONS -->
+
+        <div class="hero-buttons">
+
+
+            <a href="#projects"
+               class="button primary-button">
+
+                View Engineering Projects
+
+            </a>
+
+
+            <a href="{{ url_for(
+                    'static',
+                    filename='resume/Rashed_Abdullah_Resume.pdf'
+                ) }}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="button secondary-button">
+
+                View Resume
+
+            </a>
+
+
+            <a href="#about"
+               class="button secondary-button">
+
+                About Me
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</header>
+
+
+
+<!-- =========================================================
+     ABOUT ME
+========================================================= -->
+
+<section class="about"
+         id="about">
+
+
+    <div class="section-heading">
+
+
+        <p class="section-label">
+            INTRODUCTION
+        </p>
+
+
+        <h2>
+            About Me
+        </h2>
+
+
+    </div>
+
+
+
+    <div class="about-content">
+
+
+        <p>
+
+            I am a civil engineer and graduate student at
+            San José State University, pursuing a Master of Science
+            in Civil Engineering with a focus on Construction Management
+            and Structural Engineering.
+
+        </p>
+
+
+        <p>
+
+            My academic and professional experience includes construction
+            management, project engineering, structural and seismic analysis,
+            GIS-based spatial analysis, engineering research, and
+            data-driven decision-support tools.
+
+        </p>
+
+
+        <p>
+
+            I have professional experience as a Project Engineer,
+            supporting construction activities, coordinating with project
+            teams, monitoring project progress, and reviewing construction
+            documentation.
+
+        </p>
+
+
+        <p>
+
+            I am interested in applying engineering analysis,
+            construction management, technology, and problem-solving
+            to safe, efficient, and resilient infrastructure projects.
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
+
+<section class="education"
+         id="education">
+
+
+    <div class="section-heading">
+
+
+        <p class="section-label">
+            ACADEMIC BACKGROUND
+        </p>
+
+
+        <h2>
+            Education
+        </h2>
+
+
+    </div>
+
+
+
+    <div class="education-container">
+
+
+        <!-- MASTER'S DEGREE -->
+
+        <article class="education-card">
+
+
+            <div class="card-number">
+                01
+            </div>
+
+
+            <h3>
+                Master of Science in Civil Engineering
+            </h3>
+
+
+            <p class="institution">
+                San José State University
+            </p>
+
+
+            <p>
+
+                Focus:
+                Construction Management and Structural Engineering
+
+            </p>
+
+
+            <p class="card-date">
+                Expected Graduation: May 2027
+            </p>
+
+
+        </article>
+
+
+
+        <!-- BACHELOR'S DEGREE -->
+
+        <article class="education-card">
+
+
+            <div class="card-number">
+                02
+            </div>
+
+
+            <h3>
+                Bachelor of Science in Civil Engineering
+            </h3>
+
+
+            <p class="institution">
+                Turkish Military Academy
+            </p>
+
+
+            <p class="card-date">
+                2015 – 2020
+            </p>
+
+
+        </article>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     PROFESSIONAL EXPERIENCE
+========================================================= -->
+
+<section class="experience"
+         id="experience">
+
+
+    <div class="section-heading">
+
+
+        <p class="section-label">
+            PROFESSIONAL BACKGROUND
+        </p>
+
+
+        <h2>
+            Professional Experience
+        </h2>
+
+
+    </div>
+
+
+
+    <article class="experience-card">
+
+
+        <div class="experience-top">
+
+
+            <div>
+
+
+                <p class="experience-label">
+                    PROJECT ENGINEERING
+                </p>
+
+
+                <h3>
+                    Project Engineer
+                </h3>
+
+
+            </div>
+
+
+            <p class="experience-date">
+                September 2020 — August 2021
+            </p>
+
+
+        </div>
+
+
+
+        <div class="experience-company">
+
+
+            <strong>
+                Afghanistan Ministry of Defense
+            </strong>
+
+
+            <span>
+                Kabul, Afghanistan
+            </span>
+
+
+        </div>
+
+
+
+        <div class="experience-divider">
+        </div>
+
+
+
+        <p class="experience-description">
+
+            Supported construction and engineering activities for a
+            military hospital construction project. Coordinated with
+            project teams, monitored construction progress, reviewed
+            project documentation, and helped maintain communication
+            regarding project requirements and ongoing construction activities.
+
+        </p>
+
+
+    </article>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ENGINEERING & TECHNICAL SKILLS
+========================================================= -->
+
+<section class="skills"
+         id="skills">
+
+
+    <div class="section-heading">
+
+
+        <p class="section-label">
+            TECHNICAL CAPABILITIES
+        </p>
+
+
+        <h2>
+            Engineering & Technical Skills
+        </h2>
+
+
+        <p class="section-description">
+
+            Engineering software, construction management,
+            project management, structural analysis, GIS,
+            programming, and technical analysis capabilities
+            developed through education, professional experience,
+            and engineering projects.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="skills-container">
+
+
+        <!-- =================================================
+             01 ENGINEERING & DESIGN SOFTWARE
+        ================================================== -->
+
+        <article class="skill-category">
+
+
+            <div class="skill-number">
+                01
+            </div>
+
+
+            <h3>
+                Engineering & Design Software
+            </h3>
+
+
+            <div class="skill-items">
+
+                <span>AutoCAD</span>
+
+                <span>Revit</span>
+
+                <span>SAP2000</span>
+
+                <span>ArcGIS Pro</span>
+
+                <span>SketchUp</span>
+
+                <span>Structural Analysis</span>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             02 CONSTRUCTION
+        ================================================== -->
+
+        <article class="skill-category">
+
+
+            <div class="skill-number">
+                02
+            </div>
+
+
+            <h3>
+                Construction & Cost Management
+            </h3>
+
+
+            <div class="skill-items">
+
+                <span>Construction Management</span>
+
+                <span>Cost Estimation & Budgeting</span>
+
+                <span>Project Plans</span>
+
+                <span>Project Scope</span>
+
+                <span>Documentation Management</span>
+
+                <span>Progress Monitoring</span>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             03 PROJECT MANAGEMENT
+        ================================================== -->
+
+        <article class="skill-category">
+
+
+            <div class="skill-number">
+                03
+            </div>
+
+
+            <h3>
+                Project & Program Management
+            </h3>
+
+
+            <div class="skill-items">
+
+                <span>Project Management</span>
+
+                <span>Program Management</span>
+
+                <span>Project Tracking</span>
+
+                <span>Project Coordination</span>
+
+                <span>Leadership</span>
+
+                <span>Team Collaboration</span>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             04 PROGRAMMING
+        ================================================== -->
+
+        <article class="skill-category">
+
+
+            <div class="skill-number">
+                04
+            </div>
+
+
+            <h3>
+                Programming & Technical Analysis
+            </h3>
+
+
+            <div class="skill-items">
+
+                <span>Python</span>
+
+                <span>PyCharm</span>
+
+                <span>Google Colab</span>
+
+                <span>Streamlit</span>
+
+                <span>Microsoft Excel</span>
+
+                <span>Monte Carlo Simulation</span>
+
+                <span>Data Analysis</span>
+
+                <span>Data Visualization</span>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             05 GIS
+        ================================================== -->
+
+        <article class="skill-category">
+
+
+            <div class="skill-number">
+                05
+            </div>
+
+
+            <h3>
+                GIS & Spatial Analysis
+            </h3>
+
+
+            <div class="skill-items">
+
+                <span>ArcGIS Pro</span>
+
+                <span>GIS</span>
+
+                <span>Spatial Analysis</span>
+
+                <span>Raster Calculator</span>
+
+                <span>Reclassify</span>
+
+                <span>Overlay Analysis</span>
+
+                <span>DEM Analysis</span>
+
+                <span>LiDAR</span>
+
+                <span>Cartography</span>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             06 DOCUMENTATION
+        ================================================== -->
+
+        <article class="skill-category">
+
+
+            <div class="skill-number">
+                06
+            </div>
+
+
+            <h3>
+                Productivity & Documentation
+            </h3>
+
+
+            <div class="skill-items">
+
+                <span>Google Workspace</span>
+
+                <span>Documentation Management</span>
+
+                <span>Project Documentation</span>
+
+                <span>Technical Communication</span>
+
+                <span>Technical Writing</span>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             07 PROFESSIONAL
+        ================================================== -->
+
+        <article class="skill-category">
+
+
+            <div class="skill-number">
+                07
+            </div>
+
+
+            <h3>
+                Professional Capabilities
+            </h3>
+
+
+            <div class="skill-items">
+
+                <span>Leadership</span>
+
+                <span>Problem Solving</span>
+
+                <span>Project Organization</span>
+
+                <span>Attention to Detail</span>
+
+                <span>Engineering Decision-Making</span>
+
+                <span>Engineering Research</span>
+
+            </div>
+
+
+        </article>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ENGINEERING PROJECTS
+========================================================= -->
+
+<section class="projects"
+         id="projects">
+
+
+    <div class="section-heading">
+
+
+        <p class="section-label">
+            SELECTED WORK
+        </p>
+
+
+        <h2>
+            Engineering Projects
+        </h2>
+
+
+        <p class="section-description">
+
+            Selected academic and professional projects demonstrating
+            construction management, structural engineering,
+            seismic analysis, programming, forensic engineering,
+            GIS, spatial analysis, and project engineering skills.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="project-container">
+
+
+        <!-- =================================================
+             PROJECT 01
+        ================================================== -->
+
+        <article class="project-card">
+
+
+            <div class="project-number">
+                PROJECT 01
+            </div>
+
+
+            <h3>
+                Equipment Rent vs. Buy Decision Tool
+            </h3>
+
+
+            <p>
+
+                Developed a Python-based decision-support tool to compare
+                the long-term costs of renting versus purchasing construction
+                equipment using uncertainty analysis and Monte Carlo simulation.
+
+            </p>
+
+
+            <div class="project-tags">
+
+                <span>Python</span>
+
+                <span>PyCharm</span>
+
+                <span>Streamlit</span>
+
+                <span>Excel</span>
+
+                <span>Monte Carlo</span>
+
+            </div>
+
+
+            <a href="/rent-vs-buy"
+               class="project-button">
+
+                View Project →
+
+            </a>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             PROJECT 02
+        ================================================== -->
+
+        <article class="project-card">
+
+
+            <div class="project-number">
+                PROJECT 02
+            </div>
+
+
+            <h3>
+                SAP2000 Seismic & Structural Analysis
+            </h3>
+
+
+            <p>
+
+                Analyzed the seismic and structural response of a
+                multi-story steel building using SAP2000 and supporting
+                hand calculations. Evaluated building periods, seismic
+                coefficients, base shear, story forces, displacement,
+                and static and dynamic response in the X and Y directions.
+
+            </p>
+
+
+            <div class="project-tags">
+
+                <span>SAP2000</span>
+
+                <span>Seismic Analysis</span>
+
+                <span>Structural Dynamics</span>
+
+                <span>Response Spectrum</span>
+
+                <span>IBC</span>
+
+            </div>
+
+
+            <a href="/structural-analysis"
+               class="project-button">
+
+                View Project →
+
+            </a>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             PROJECT 03
+        ================================================== -->
+
+        <article class="project-card">
+
+
+            <div class="project-number">
+                PROJECT 03
+            </div>
+
+
+            <h3>
+                Military Hospital Construction Project
+            </h3>
+
+
+            <p>
+
+                Supported construction and engineering activities
+                for a military hospital project, including project
+                coordination, construction progress monitoring,
+                construction documentation, and review of project
+                requirements.
+
+            </p>
+
+
+            <div class="project-tags">
+
+                <span>Construction Management</span>
+
+                <span>Project Engineering</span>
+
+                <span>Project Coordination</span>
+
+                <span>Field Engineering</span>
+
+                <span>Documentation</span>
+
+            </div>
+
+
+            <a href="/military-hospital"
+               class="project-button">
+
+                View Project →
+
+            </a>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             PROJECT 04
+        ================================================== -->
+
+        <article class="project-card">
+
+
+            <div class="project-number">
+                PROJECT 04
+            </div>
+
+
+            <h3>
+                I-5/SR-14 Earthquake Failure Investigation
+            </h3>
+
+
+            <p>
+
+                Conducted a forensic engineering investigation of the
+                I-5/SR-14 Newhall Pass Interchange failures during the
+                1971 San Fernando and 1994 Northridge earthquakes.
+                Compared structural damage, failure mechanisms,
+                seismic vulnerabilities, reconstruction measures,
+                and engineering lessons from both events.
+
+            </p>
+
+
+            <div class="project-tags">
+
+                <span>Forensic Engineering</span>
+
+                <span>Bridge Engineering</span>
+
+                <span>Earthquake Engineering</span>
+
+                <span>Failure Analysis</span>
+
+                <span>Seismic Retrofit</span>
+
+            </div>
+
+
+            <a href="/forensic-engineering"
+               class="project-button">
+
+                View Project →
+
+            </a>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             PROJECT 05
+        ================================================== -->
+
+        <article class="project-card">
+
+
+            <div class="project-number">
+                PROJECT 05
+            </div>
+
+
+            <h3>
+                GIS Flood Risk Assessment: Harris County, Texas
+            </h3>
+
+
+            <p>
+
+                Performed a GIS-based flood risk assessment of Harris County,
+                Texas using ArcGIS Pro. Integrated FEMA flood hazard data,
+                Digital Elevation Model and LiDAR elevation data,
+                watersheds, and stream networks to identify flood-prone
+                areas and compare GIS-derived risk zones with existing
+                FEMA floodplain boundaries.
+
+            </p>
+
+
+            <div class="project-tags">
+
+                <span>ArcGIS Pro</span>
+
+                <span>GIS</span>
+
+                <span>Spatial Analysis</span>
+
+                <span>Flood Risk</span>
+
+                <span>DEM</span>
+
+                <span>LiDAR</span>
+
+                <span>FEMA</span>
+
+            </div>
+
+
+            <a href="/gis-flood-risk"
+               class="project-button">
+
+                View Project →
+
+            </a>
+
+
+        </article>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact"
+         id="contact">
+
+
+    <div class="contact-content">
+
+
+        <p class="contact-label">
+            LET'S CONNECT
+        </p>
+
+
+        <h2>
+            Contact Me
+        </h2>
+
+
+        <p class="contact-intro">
+
+            I am interested in opportunities in civil engineering,
+            construction management, structural engineering,
+            project engineering, and infrastructure development.
+
+        </p>
+
+
+        <p class="contact-message">
+
+            Feel free to contact me to discuss engineering opportunities,
+            projects, or professional collaboration.
+
+        </p>
+
+
+
+        <div class="contact-grid">
+
+
+            <!-- EMAIL -->
+
+            <a href="mailto:rashedabdullah518@gmail.com"
+               class="contact-card">
+
+
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+
+                <div class="contact-info">
+
+                    <span class="contact-type">
+                        EMAIL
+                    </span>
+
+                    <strong>
+                        rashedabdullah518@gmail.com
+                    </strong>
+
+                </div>
+
+
+            </a>
+
+
+
+            <!-- PHONE -->
+
+            <a href="tel:+14088987016"
+               class="contact-card">
+
+
+                <div class="contact-icon">
+                    ☎
+                </div>
+
+
+                <div class="contact-info">
+
+                    <span class="contact-type">
+                        PHONE
+                    </span>
+
+                    <strong>
+                        (408) 898-7016
+                    </strong>
+
+                </div>
+
+
+            </a>
+
+
+
+            <!-- LINKEDIN -->
+
+            <a href="https://www.linkedin.com/in/ahmad-rashed-abdullah/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-card">
+
+
+                <div class="contact-icon">
+                    in
+                </div>
+
+
+                <div class="contact-info">
+
+                    <span class="contact-type">
+                        LINKEDIN
+                    </span>
+
+                    <strong>
+                        Connect on LinkedIn
+                    </strong>
+
+                </div>
+
+
+            </a>
+
+
+
+            <!-- LOCATION -->
+
+            <div class="contact-card">
+
+
+                <div class="contact-icon">
+                    ◉
+                </div>
+
+
+                <div class="contact-info">
+
+                    <span class="contact-type">
+                        LOCATION
+                    </span>
+
+                    <strong>
+                        San Jose, CA
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CONTACT BUTTONS -->
+
+        <div class="contact-actions">
+
+
+            <a href="mailto:rashedabdullah518@gmail.com"
+               class="contact-primary-button">
+
+                Email Me
+
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/ahmad-rashed-abdullah/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-secondary-button">
+
+                View LinkedIn
+
+            </a>
+
+
+            <a href="{{ url_for(
+                    'static',
+                    filename='resume/Rashed_Abdullah_Resume.pdf'
+                ) }}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-secondary-button">
+
+                View Resume
+
+            </a>
+
+
+        </div>
+
+
+
+        <a href="#home"
+           class="back-top">
+
+            Back to Top ↑
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <strong>
+                Rashed Abdullah
+            </strong>
+
+            <span>
+                Civil Engineering Portfolio
+            </span>
+
+        </div>
+
+
+        <p>
+            © 2026 Rashed Abdullah
+        </p>
+
+
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>

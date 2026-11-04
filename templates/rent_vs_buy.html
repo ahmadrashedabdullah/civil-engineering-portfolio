@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Equipment Rent vs. Buy | Rashed Abdullah</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <h2>Rashed Abdullah</h2>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/#about">About</a>
+        <a href="/#education">Education</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#contact">Contact</a>
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     PROJECT PAGE
+===================================================== -->
+
+<section class="project-detail">
+
+
+    <!-- PROJECT HEADER -->
+
+    <div class="project-header">
+
+        <p class="project-label">
+            CONSTRUCTION OPERATIONS ANALYSIS
+        </p>
+
+        <h1>
+            Equipment Rent vs. Buy Decision Tool
+        </h1>
+
+        <p class="project-subtitle">
+            Monte Carlo Simulation • Python • Streamlit • Excel
+        </p>
+
+        <p class="project-intro">
+            An interactive construction decision-support tool developed
+            to evaluate whether renting or purchasing a skid steer is
+            more economical under uncertain equipment utilization,
+            rental costs, ownership costs, and resale conditions.
+        </p>
+
+    </div>
+
+
+    <div class="project-detail-content">
+
+
+        <!-- =====================================================
+             PROJECT OVERVIEW
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                Construction companies frequently need to decide whether
+                equipment should be rented only when needed or purchased
+                for repeated use across multiple projects.
+            </p>
+
+            <p>
+                This project evaluates the financial uncertainty associated
+                with renting versus purchasing a wheeled skid steer.
+                Rather than relying on one fixed cost estimate, the model
+                uses Monte Carlo simulation to evaluate thousands of
+                possible cost scenarios.
+            </p>
+
+            <div class="project-highlight">
+
+                At what level of equipment utilization does buying
+                become more economical than renting?
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             DECISION ALTERNATIVES
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Decision Alternatives</h2>
+
+            <div class="decision-grid">
+
+
+                <div class="decision-card">
+
+                    <h3>Option 1 — Rent</h3>
+
+                    <p>
+                        Rent the skid steer only during the weeks
+                        that the equipment is required for construction
+                        projects.
+                    </p>
+
+                </div>
+
+
+                <div class="decision-card">
+
+                    <h3>Option 2 — Buy</h3>
+
+                    <p>
+                        Purchase the skid steer, use it across the same
+                        construction projects, account for ownership and
+                        operating costs, and recover part of the investment
+                        through resale at the end of the planning period.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             PROJECT DATA
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Project Data</h2>
+
+            <p>
+                The model uses construction equipment utilization information
+                and cost assumptions stored in an Excel workbook. The
+                Streamlit application can load the workbook directly or
+                allow the user to enter assumptions manually.
+            </p>
+
+            <p>
+                The project uses realistic synthetic construction data
+                together with equipment cost assumptions to demonstrate
+                how uncertainty affects the rent-versus-buy decision.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             STREAMLIT APPLICATION
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Interactive Streamlit Application</h2>
+
+            <p>
+                I used Streamlit to create an interactive graphical
+                interface that allows users to perform the analysis
+                without modifying the Python code.
+            </p>
+
+            <p>
+                The user can select a budget, upload an Excel workbook
+                or use manual inputs, select the planning period,
+                choose the number of Monte Carlo simulations, set a
+                random seed, and modify equipment utilization.
+            </p>
+
+
+            <div class="project-screenshot">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='images/Screenshot 2026-11-04 105701.png') }}"
+                    alt="Equipment Rent Versus Buy Streamlit application">
+
+                <p class="image-caption">
+                    Streamlit application interface showing the project
+                    budget, Excel workbook input, planning period,
+                    and Monte Carlo simulation settings.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             UNCERTAIN INPUTS
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Uncertain Inputs</h2>
+
+            <p>
+                Equipment utilization and costs cannot be predicted
+                perfectly. The model therefore represents the major
+                uncertain variables using triangular probability
+                distributions defined by low, most likely, and high values.
+            </p>
+
+
+            <div class="input-grid">
+
+
+                <div class="input-card">
+
+                    <h3>Annual Utilization</h3>
+
+                    <p>
+                        Expected annual operating hours for the skid steer.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>Weekly Rental Rate</h3>
+
+                    <p>
+                        Uncertainty in the weekly cost of renting
+                        the equipment.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>Paid Rental Weeks</h3>
+
+                    <p>
+                        Number of weeks per year that rental equipment
+                        would be required.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>Purchase Price</h3>
+
+                    <p>
+                        Variation in the initial cost of purchasing
+                        the skid steer.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>Maintenance Cost</h3>
+
+                    <p>
+                        Annual maintenance represented as a percentage
+                        of the equipment purchase price.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>Resale Value</h3>
+
+                    <p>
+                        Estimated terminal resale value at the end
+                        of the selected ownership period.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>Fuel & Operating Cost</h3>
+
+                    <p>
+                        Hourly fuel and operating expenses applied
+                        during equipment operation.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- INPUT SCREENSHOT -->
+
+            <div class="project-screenshot">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='images/Screenshot 2026-11-04 105714.png') }}"
+                    alt="Triangular Monte Carlo input assumptions">
+
+                <p class="image-caption">
+                    Triangular probability inputs showing the low,
+                    most likely, and high assumptions used by the
+                    Monte Carlo simulation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             MONTE CARLO METHOD
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Monte Carlo Simulation Method</h2>
+
+            <p>
+                Monte Carlo simulation was used to evaluate uncertainty
+                in the equipment decision. During each trial, the model
+                randomly samples values from the input probability
+                distributions and calculates the resulting rental
+                and ownership costs.
+            </p>
+
+            <p>
+                This process is repeated thousands of times to create
+                distributions of possible outcomes rather than relying
+                on one deterministic estimate.
+            </p>
+
+            <p>
+                For the analysis shown here, the application ran
+                <strong>10,000 simulations</strong>. A random seed was
+                also used so the same assumptions can reproduce the
+                same simulation results.
+            </p>
+
+
+            <div class="workflow">
+
+                <div>Excel / User Inputs</div>
+
+                <span>→</span>
+
+                <div>Triangular Sampling</div>
+
+                <span>→</span>
+
+                <div>10,000 Simulations</div>
+
+                <span>→</span>
+
+                <div>Rent & Buy Costs</div>
+
+                <span>→</span>
+
+                <div>Risk Analysis</div>
+
+                <span>→</span>
+
+                <div>Recommendation</div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             KEY OUTPUTS
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Key Outputs</h2>
+
+
+            <div class="output-grid">
+
+
+                <div class="output-card">
+
+                    <h3>Average Rent Cost</h3>
+
+                    <p>
+                        Expected total rental cost across the
+                        simulated scenarios.
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>Average Buy Cost</h3>
+
+                    <p>
+                        Expected ownership cost after considering
+                        purchase, maintenance, operation, and resale.
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>Probability Buy Is Cheaper</h3>
+
+                    <p>
+                        Percentage of simulation trials where buying
+                        produces a lower total cost than renting.
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>P50 / P80 / P90</h3>
+
+                    <p>
+                        Cost percentiles used to communicate uncertainty
+                        and possible higher-cost outcomes.
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>Budget Probability</h3>
+
+                    <p>
+                        Probability that each alternative remains
+                        within the selected total budget.
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>Break-Even Utilization</h3>
+
+                    <p>
+                        Annual equipment usage where purchasing begins
+                        to become competitive with renting.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIMULATION RESULTS
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Monte Carlo Results</h2>
+
+            <p>
+                Using the selected five-year planning period and
+                10,000 Monte Carlo simulations, the model produced
+                the following results.
+            </p>
+
+
+            <div class="output-grid">
+
+
+                <div class="output-card">
+
+                    <h3>Average Rental Cost</h3>
+
+                    <p>
+                        <strong>$67,715.34</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>Average Buying Cost</h3>
+
+                    <p>
+                        <strong>$69,786.37</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>Buying Is Cheaper</h3>
+
+                    <p>
+                        <strong>38.8%</strong>
+                        of simulation trials
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>Rent Within Budget</h3>
+
+                    <p>
+                        <strong>6.0%</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>Buy Within Budget</h3>
+
+                    <p>
+                        <strong>7.1%</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="output-card">
+
+                    <h3>Break-Even Annual Use</h3>
+
+                    <p>
+                        <strong>
+                            8.46 paid rental weeks/year
+                        </strong>
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- RESULTS SCREENSHOT -->
+
+            <div class="project-screenshot">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='images/Screenshot 2026-11-04 105734.png') }}"
+                    alt="Monte Carlo rent versus buy simulation results">
+
+                <p class="image-caption">
+                    Monte Carlo results showing average rent and buy costs,
+                    budget probabilities, probability that buying is cheaper,
+                    and the break-even annual utilization.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             BREAK-EVEN ANALYSIS
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Break-Even Analysis</h2>
+
+            <p>
+                The model evaluates how the economic decision changes
+                as annual equipment utilization increases.
+            </p>
+
+            <p>
+                Average costs become approximately equal at
+                <strong>1.05× utilization</strong>, corresponding
+                to approximately
+                <strong>8.44 paid rental weeks per year</strong>.
+            </p>
+
+            <p>
+                The 50% probability threshold occurs at approximately
+                <strong>8.46 paid rental weeks per year</strong>.
+                Above this level, buying becomes cheaper in at least
+                half of the simulated trials when annual rental
+                duration is held fixed.
+            </p>
+
+
+            <!-- BREAK-EVEN SCREENSHOT -->
+
+            <div class="project-screenshot">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='images/Screenshot 2026-11-04 105751.png') }}"
+                    alt="Break-even utilization analysis">
+
+                <p class="image-caption">
+                    Break-even curve showing how the probability that
+                    buying is cheaper changes as annual equipment
+                    utilization increases.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             RECOMMENDATION
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Recommendation</h2>
+
+            <div class="project-highlight">
+
+                Recommendation: RENT the equipment at the
+                selected utilization level.
+
+            </div>
+
+            <p>
+                Under the selected assumptions, renting has the lower
+                average total cost. The expected rental cost is
+                approximately <strong>$67,715</strong>, compared with
+                approximately <strong>$69,786</strong> for purchasing.
+            </p>
+
+            <p>
+                Buying is cheaper in only
+                <strong>38.8% of the simulated scenarios</strong>
+                at the selected utilization level.
+            </p>
+
+            <p>
+                However, the recommendation changes as equipment usage
+                increases. When annual demand rises above approximately
+                <strong>8.46 paid rental weeks per year</strong>,
+                purchasing becomes increasingly competitive.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             COST PERCENTILES
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Cost Percentiles</h2>
+
+            <p>
+                The P50, P80, and P90 values provide additional
+                information about cost uncertainty and higher-cost
+                outcomes.
+            </p>
+
+
+            <div class="decision-grid">
+
+
+                <div class="decision-card">
+
+                    <h3>Rental Cost</h3>
+
+                    <p>
+                        <strong>P50:</strong>
+                        $67,579.37
+                    </p>
+
+                    <p>
+                        <strong>P80:</strong>
+                        $71,935.25
+                    </p>
+
+                    <p>
+                        <strong>P90:</strong>
+                        $74,322.78
+                    </p>
+
+                </div>
+
+
+                <div class="decision-card">
+
+                    <h3>Buying Cost</h3>
+
+                    <p>
+                        <strong>P50:</strong>
+                        $69,936.72
+                    </p>
+
+                    <p>
+                        <strong>P80:</strong>
+                        $75,415.98
+                    </p>
+
+                    <p>
+                        <strong>P90:</strong>
+                        $78,082.12
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- COST COMPARISON SCREENSHOT -->
+
+            <div class="project-screenshot">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='images/Screenshot 2026-11-04 105758.png') }}"
+                    alt="Cost percentiles and rent versus buy comparison">
+
+                <p class="image-caption">
+                    P50, P80, and P90 cost percentiles together with
+                    the average total cost comparison for the rent
+                    and buy alternatives.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             COST DISTRIBUTIONS
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Simulated Cost Distributions</h2>
+
+            <p>
+                Looking only at average costs can hide important
+                uncertainty. The simulated distributions show the
+                range of possible rental and ownership costs generated
+                across the Monte Carlo trials.
+            </p>
+
+            <p>
+                The distributions also show the overlap between the
+                two alternatives, helping explain why the preferred
+                decision can change depending on the sampled conditions.
+            </p>
+
+
+            <div class="project-screenshot">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='images/Screenshot 2026-11-04 105803.png') }}"
+                    alt="Simulated rent and buy cost distributions">
+
+                <p class="image-caption">
+                    Distribution of simulated total costs for the
+                    rent and buy alternatives across the Monte Carlo trials.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             VERIFICATION
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Verification & Testing</h2>
+
+            <p>
+                The model was tested and independently checked to make
+                sure the simulation produced consistent and logically
+                valid results.
+            </p>
+
+
+            <div class="verification-list">
+
+                <p>
+                    ✓ Same random seed produces reproducible results
+                </p>
+
+                <p>
+                    ✓ Percentiles follow P50 ≤ P80 ≤ P90
+                </p>
+
+                <p>
+                    ✓ Invalid inputs are checked before simulation
+                </p>
+
+                <p>
+                    ✓ Rent and buy calculations were independently checked
+                </p>
+
+                <p>
+                    ✓ Simulation behavior was evaluated under different
+                    utilization assumptions
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             TOOLS
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Tools & Technologies</h2>
+
+
+            <div class="skills-list">
+
+                <span>Python</span>
+
+                <span>Streamlit</span>
+
+                <span>Excel</span>
+
+                <span>Pandas</span>
+
+                <span>Monte Carlo Simulation</span>
+
+                <span>Probability Analysis</span>
+
+                <span>Data Visualization</span>
+
+                <span>PyCharm</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             SKILLS
+        ===================================================== -->
+
+        <div class="project-section">
+
+            <h2>Skills Demonstrated</h2>
+
+            <p>
+                This project combines construction engineering
+                decision-making with programming, probability,
+                cost analysis, risk analysis, data management,
+                and interactive visualization.
+            </p>
+
+
+            <div class="skills-list">
+
+                <span>Construction Economics</span>
+
+                <span>Equipment Analysis</span>
+
+                <span>Risk Analysis</span>
+
+                <span>Decision Support</span>
+
+                <span>Python Programming</span>
+
+                <span>Data Analysis</span>
+
+                <span>Monte Carlo Modeling</span>
+
+                <span>Technical Communication</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             BACK TO PROJECTS
+        ===================================================== -->
+
+        <div class="back-button-container">
+
+            <a href="/#projects"
+               class="button">
+
+                ← Back to Engineering Projects
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        © 2026 Rashed Abdullah |
+        Civil Engineering Portfolio
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="GIS Flood Risk Assessment of Harris County, Texas using ArcGIS Pro by Rashed Abdullah.">
+
+    <title>
+        GIS Flood Risk Assessment | Rashed Abdullah
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="/"
+           class="nav-name">
+            Rashed Abdullah
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/#about">
+                About
+            </a>
+
+            <a href="/#education">
+                Education
+            </a>
+
+            <a href="/#experience">
+                Experience
+            </a>
+
+            <a href="/#skills">
+                Skills
+            </a>
+
+            <a href="/#projects">
+                Projects
+            </a>
+
+            <a href="/#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     PROJECT PAGE
+========================================================= -->
+
+<main class="project-detail">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="project-header">
+
+        <p class="project-label">
+            GIS & ENVIRONMENTAL ENGINEERING
+        </p>
+
+
+        <h1>
+            GIS Flood Risk Assessment
+        </h1>
+
+
+        <p class="project-subtitle">
+            Harris County, Texas
+        </p>
+
+
+        <p class="project-intro">
+
+            This project used ArcGIS Pro to assess flood risk across
+            Harris County, Texas by integrating elevation, hydrological,
+            and regulatory flood data. The analysis identified areas
+            susceptible to flooding and compared GIS-derived flood-risk
+            classifications with FEMA-designated flood zones.
+
+        </p>
+
+
+        <div class="project-tags"
+             style="justify-content:center; margin-top:30px;">
+
+            <span>ArcGIS Pro</span>
+
+            <span>GIS</span>
+
+            <span>Spatial Analysis</span>
+
+            <span>DEM</span>
+
+            <span>LiDAR</span>
+
+            <span>FEMA NFHL</span>
+
+            <span>Flood Risk</span>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="project-detail-content">
+
+
+        <!-- =================================================
+             01 OVERVIEW
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                01 — PROJECT OVERVIEW
+            </p>
+
+            <h2>
+                Project Objective
+            </h2>
+
+            <p>
+                The objective of this project was to analyze current
+                flood risk in Harris County using GIS, compare FEMA
+                flood maps with updated elevation data, identify areas
+                where flood risk may be underestimated, and produce
+                maps that clearly represent high-risk flood zones.
+            </p>
+
+
+            <div class="project-highlight">
+
+                Using spatial data to identify flood risk that may not
+                be fully represented by existing regulatory flood maps.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             02 PROBLEM
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                02 — PROBLEM STATEMENT
+            </p>
+
+            <h2>
+                Why Flood Risk Matters
+            </h2>
+
+            <p>
+                Harris County faces significant flood risk due to
+                low-lying terrain, land subsidence, extreme weather,
+                rapid urbanization, and its proximity to the Gulf of Mexico.
+            </p>
+
+            <p>
+                Existing regulatory flood maps may not always represent
+                current environmental conditions. Updated spatial data
+                can therefore provide additional information for flood-risk
+                assessment, infrastructure planning, and disaster preparedness.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             03 STUDY AREA
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                03 — STUDY AREA
+            </p>
+
+            <h2>
+                Harris County, Texas
+            </h2>
+
+            <p>
+                Harris County is located in southeastern Texas and
+                contains the Houston metropolitan area. The county
+                covers approximately 1,777 square miles and contains
+                several major watersheds and drainage systems.
+            </p>
+
+
+            <div class="input-grid">
+
+                <div class="input-card">
+
+                    <h3>
+                        Area
+                    </h3>
+
+                    <p>
+                        Approximately 1,777 square miles.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        Population
+                    </h3>
+
+                    <p>
+                        More than 4.7 million residents.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        Major Watersheds
+                    </h3>
+
+                    <p>
+                        Armand Bayou, Clear Creek,
+                        and Sims Bayou.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             04 DATA
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                04 — DATA USED
+            </p>
+
+            <h2>
+                Spatial Datasets
+            </h2>
+
+            <p>
+                Multiple spatial datasets were integrated to represent
+                regulatory flood zones, ground elevation, and hydrological
+                conditions across Harris County.
+            </p>
+
+
+            <div class="input-grid">
+
+
+                <div class="input-card">
+
+                    <h3>
+                        FEMA NFHL
+                    </h3>
+
+                    <p>
+                        Regulatory flood-zone information from the
+                        FEMA National Flood Hazard Layer.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        DEM
+                    </h3>
+
+                    <p>
+                        Digital Elevation Model data representing
+                        ground elevation throughout the study area.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        LiDAR
+                    </h3>
+
+                    <p>
+                        High-resolution elevation data used to improve
+                        understanding of low-lying terrain.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        Watersheds
+                    </h3>
+
+                    <p>
+                        Watershed boundaries used to represent
+                        hydrological influences on flood risk.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        Stream Networks
+                    </h3>
+
+                    <p>
+                        Drainage and stream information used to evaluate
+                        proximity to water bodies.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        HCFCD Data
+                    </h3>
+
+                    <p>
+                        Spatial information from the Harris County
+                        Flood Control District.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             05 WORKFLOW
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                05 — GIS WORKFLOW
+            </p>
+
+            <h2>
+                ArcGIS Pro Methodology
+            </h2>
+
+            <p>
+                The project used a structured GIS workflow to integrate,
+                analyze, classify, and visualize flood-related spatial data.
+            </p>
+
+
+            <div class="workflow">
+
+                <div>
+                    Import Data
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    Elevation Analysis
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    Raster Analysis
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    Reclassify Risk
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    FEMA Overlay
+                </div>
+
+                <span>→</span>
+
+                <div>
+                    Map Results
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             06 ELEVATION ANALYSIS
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                06 — ELEVATION ANALYSIS
+            </p>
+
+            <h2>
+                Identifying Low-Lying Areas
+            </h2>
+
+            <p>
+                Digital Elevation Model data was used to represent
+                ground elevation across Harris County.
+            </p>
+
+            <p>
+                Low-elevation areas were important because reduced
+                elevation and limited drainage capacity can increase
+                susceptibility to flooding.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             07 RASTER
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                07 — RASTER ANALYSIS
+            </p>
+
+            <h2>
+                Raster Calculator
+            </h2>
+
+            <p>
+                Raster-based analysis tools in ArcGIS Pro were used
+                to evaluate elevation values and identify areas that
+                may be more susceptible to flooding.
+            </p>
+
+            <p>
+                Watershed and stream-network information was incorporated
+                to account for the increased flood susceptibility of
+                areas near drainage channels and water bodies.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             08 CLASSIFICATION
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                08 — FLOOD RISK CLASSIFICATION
+            </p>
+
+            <h2>
+                Low, Moderate & High Risk
+            </h2>
+
+            <p>
+                The Reclassify tool was used to organize elevation
+                information into three flood-risk categories.
+            </p>
+
+
+            <div class="input-grid">
+
+
+                <div class="input-card">
+
+                    <h3>
+                        Low Risk
+                    </h3>
+
+                    <p>
+                        Generally associated with higher-elevation
+                        areas and improved natural drainage.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        Moderate Risk
+                    </h3>
+
+                    <p>
+                        Transitional areas influenced by both
+                        elevation and proximity to waterways.
+                    </p>
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <h3>
+                        High Risk
+                    </h3>
+
+                    <p>
+                        Primarily low-elevation areas and locations
+                        near major watershed networks.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             09 FEMA
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                09 — FEMA COMPARISON
+            </p>
+
+            <h2>
+                Overlay Analysis
+            </h2>
+
+            <p>
+                The GIS-generated flood-risk classifications were
+                compared with FEMA flood-hazard layers using spatial
+                overlay analysis.
+            </p>
+
+            <p>
+                This comparison was used to identify locations where
+                GIS-derived moderate or high flood risk extended beyond
+                existing FEMA-designated flood zones.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             10 RESULTS
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                10 — RESULTS
+            </p>
+
+            <h2>
+                Key Findings
+            </h2>
+
+
+            <div class="verification-list">
+
+                <p>
+                    ✓ High-risk areas were concentrated in
+                    low-elevation regions.
+                </p>
+
+                <p>
+                    ✓ Areas near major streams and watershed
+                    networks showed greater flood susceptibility.
+                </p>
+
+                <p>
+                    ✓ Moderate-risk areas occurred throughout
+                    transitional portions of the county.
+                </p>
+
+                <p>
+                    ✓ Higher-elevation areas generally showed
+                    lower flood susceptibility.
+                </p>
+
+                <p>
+                    ✓ Some GIS-derived moderate and high-risk areas
+                    extended beyond FEMA-designated flood zones.
+                </p>
+
+            </div>
+
+
+            <div class="project-highlight">
+
+                Updated spatial analysis indicated that existing
+                regulatory flood zones may underestimate flood risk
+                in some locations.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             11 PLANNING
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                11 — ENGINEERING APPLICATION
+            </p>
+
+            <h2>
+                Planning & Infrastructure
+            </h2>
+
+            <p>
+                GIS-based flood-risk assessment can support civil
+                engineering decisions related to infrastructure,
+                land-use planning, stormwater management, disaster
+                preparedness, and community resilience.
+            </p>
+
+            <p>
+                Identifying areas of underestimated flood risk can help
+                planners and engineers make better-informed decisions
+                about future development and mitigation strategies.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             12 LIMITATIONS
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                12 — LIMITATIONS
+            </p>
+
+            <h2>
+                Analysis Limitations
+            </h2>
+
+            <p>
+                The analysis primarily used elevation and proximity
+                to water bodies and did not include detailed
+                hydrodynamic modeling or real-time rainfall data.
+            </p>
+
+            <p>
+                Dataset resolution and accuracy may also affect results,
+                and future climate-change impacts such as increased
+                rainfall intensity and sea-level rise were not directly
+                modeled.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             13 CONCLUSION
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                13 — CONCLUSION
+            </p>
+
+            <h2>
+                Project Conclusion
+            </h2>
+
+            <p>
+                This project demonstrated how ArcGIS Pro and updated
+                spatial datasets can be used to improve understanding
+                of flood risk across Harris County.
+            </p>
+
+            <p>
+                Integrating elevation, hydrological, and regulatory
+                flood information revealed spatial patterns that may
+                not be fully represented by existing floodplain maps.
+            </p>
+
+
+            <div class="project-highlight">
+
+                Modern GIS tools can support more informed
+                infrastructure planning, flood mitigation,
+                and disaster preparedness.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             14 SKILLS
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-label">
+                14 — SKILLS DEMONSTRATED
+            </p>
+
+            <h2>
+                GIS & Engineering Skills Applied
+            </h2>
+
+
+            <div class="skills-list">
+
+                <span>ArcGIS Pro</span>
+
+                <span>GIS</span>
+
+                <span>Spatial Analysis</span>
+
+                <span>Raster Calculator</span>
+
+                <span>Reclassify</span>
+
+                <span>Overlay Analysis</span>
+
+                <span>DEM Analysis</span>
+
+                <span>LiDAR</span>
+
+                <span>FEMA NFHL</span>
+
+                <span>Cartography</span>
+
+                <span>Flood Risk Assessment</span>
+
+                <span>Environmental Analysis</span>
+
+                <span>Data Visualization</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BACK
+        ================================================== -->
+
+        <div class="back-button-container">
+
+            <a href="/#projects"
+               class="button primary-button">
+
+                ← Back to Engineering Projects
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <strong>
+                Rashed Abdullah
+            </strong>
+
+            <span>
+                Civil Engineering Portfolio
+            </span>
+
+        </div>
+
+        <p>
+            © 2026 Rashed Abdullah
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
