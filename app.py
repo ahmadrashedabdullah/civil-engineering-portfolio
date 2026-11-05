@@ -75,6 +75,16 @@ def gis_flood_risk():
 
 
 # ============================================================
+# PROJECT 06
+# MODEL-BASED RESIDENTIAL COST ESTIMATION
+# ============================================================
+
+@app.route("/residential-cost-estimation")
+def residential_cost_estimation():
+    return render_template("residential_cost_estimation.html")
+
+
+# ============================================================
 # RUN FLASK DEVELOPMENT SERVER
 # ============================================================
 
