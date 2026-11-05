@@ -2,6 +2,8 @@
 # RASHED ABDULLAH
 # CIVIL ENGINEERING PORTFOLIO
 # FLASK APPLICATION
+#
+# PROJECTS 01 - 09
 # ============================================================
 
 from flask import Flask, render_template
@@ -66,7 +68,6 @@ def forensic_engineering():
 # ============================================================
 # PROJECT 05
 # GIS FLOOD RISK ASSESSMENT
-# HARRIS COUNTY, TEXAS
 # ============================================================
 
 @app.route("/gis-flood-risk")
@@ -85,11 +86,41 @@ def residential_cost_estimation():
 
 
 # ============================================================
+# PROJECT 07
+# LAWRENCE PLAZA MIXED-USE DEVELOPMENT
+# ============================================================
+
+@app.route("/lawrence-plaza-estimation")
+def lawrence_plaza_estimation():
+    return render_template("lawrence_plaza_estimation.html")
+
+
+# ============================================================
+# PROJECT 08
+# DIFFERING SITE CONDITIONS
+# CONSTRUCTION CLAIMS & RISK ANALYSIS
+# ============================================================
+
+@app.route("/differing-site-conditions")
+def differing_site_conditions():
+    return render_template("differing_site_conditions.html")
+
+
+# ============================================================
+# PROJECT 09
+# DELIVERY METHODS & CONTRACTS
+# ============================================================
+
+@app.route("/delivery-methods-contracts")
+def delivery_methods_contracts():
+    return render_template("delivery_methods_contracts.html")
+
+
+# ============================================================
 # RUN FLASK DEVELOPMENT SERVER
 # ============================================================
 
 if __name__ == "__main__":
-
     app.run(
         host="127.0.0.1",
         port=5000,
